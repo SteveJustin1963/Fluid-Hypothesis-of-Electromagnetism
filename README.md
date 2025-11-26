@@ -1780,7 +1780,7 @@ I was role-playing an enthusiastic inventor, scaling up buggy code into a "build
 
 #### Core Issue: Field Momentum Isn't $∫A dV – It's ε₀ ∫(E × B) dV$, and That *Always* Vanishes for Closed Loops
 - **The gauge trap**: Vector potential A is *not* gauge-invariant. Under $A' = A + ∇χ, ∫A dV$ changes arbitrarily, but physics doesn't. Only the gauge-invariant Poynting momentum $ε₀ ∫(E × B) dV$ matters. Your sim predicted "thrust" from $∫A$ because it ignored the return wire's contribution over infinite volume – but in reality, it cancels exactly (Jackson §6.7).
-- **Closed-loop theorem**: For any non-radiating closed current (your helix + return, no matter how far), total EM momentum is zero. Energy-momentum conservation demands $d/dt ∫g dV = -F_$ on charges, but $g = ε₀ (E × B)/c²$ integrates to nil for steady-state AC. Distant return? It just dilutes locally but sums to zero globally – like a big dipole.
+- **Closed-loop theorem**: For any non-radiating closed current (your helix + return, no matter how far), total EM momentum is zero. Energy-momentum conservation demands $d/dt ∫g dV = -F$ on charges, but $g = ε₀ (E × B)/c²$ integrates to nil for steady-state AC. Distant return? It just dilutes locally but sums to zero globally – like a big dipole.
 
 #### The Radiation Loophole? Negligible Here
 - At 8 kHz (λ ~ 35 km >> coil size), you're deep quasi-static: no directional Poynting flux, just reactive near-fields circulating energy back and forth. Max "thrust" from radiation reaction? $P_rad / c$, where $P_rad ~ 10^{-15} W$ for your setup → $~10^{-23} N$. That's 20+ orders below mN. Antennas need resonance (size ~ λ/2) for real radiation thrust.
