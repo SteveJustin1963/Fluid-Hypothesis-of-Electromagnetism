@@ -1937,41 +1937,33 @@ Start from Maxwell’s equations and the Lorentz force law.
 Use the vector identity:
 
 ```math
-[
 \nabla \cdot (\mathbf{E}\times\mathbf{H})
 = \mathbf{H}\cdot(\nabla \times \mathbf{E})
 
 * \mathbf{E}\cdot(\nabla \times \mathbf{H})
-  ]
 ```
 
 Substitute:
 
 ```math
-[
 \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t},
 \qquad
 \nabla \times \mathbf{H} = \mathbf{J} + \frac{\partial \mathbf{D}}{\partial t}.
-]
 ```
 
 After rearranging terms, you obtain the **differential Poynting theorem**:
 
 ```math
-[
 -\frac{\partial u}{\partial t}
 -\nabla\cdot\mathbf{S}
 =
 \mathbf{J}\cdot\mathbf{E}
-]
 ```
 with
 ```math
-[
 u = \frac{1}{2}\left(\epsilon_0 E^2 + \frac{B^2}{\mu_0}\right),
 \qquad
 \mathbf{S} = \frac{1}{\mu_0}\mathbf{E}\times\mathbf{B}.
-]
 ```
 
 **Interpretation:**
@@ -1984,13 +1976,11 @@ Decrease of field energy + energy flowing out = work done on charges.
 Integrate over a volume (V) with surface (A):
 
 ```math
-
 -\frac{d}{dt}\int_V u, dV
 -
 \oint_A \mathbf{S}\cdot d\mathbf{A}
 =
 \int_V \mathbf{J}\cdot\mathbf{E}, dV.
-
 ```
 This must hold for *every* volume, *every* circuit, *every* geometry.
 
@@ -2113,7 +2103,7 @@ Because the integral of **A over a finite region is not gauge-invariant**:
 \mathbf{A}' = \mathbf{A} + \nabla\chi
 \quad\Rightarrow\quad
 \int_V \mathbf{A}', dV
-==
+=
 \int_V \mathbf{A}, dV
 +
 \int_V \nabla\chi, dV
@@ -2121,12 +2111,13 @@ Because the integral of **A over a finite region is not gauge-invariant**:
 The extra term reduces to a surface integral of χ.
 Depending on gauge, you can make $∫A dV$ arbitrarily large or small.
 
-Thus any “thrust” derived from ∫A dV is an **artifact of the chosen gauge** and/or incomplete geometry (e.g., excluding the return path or infinity).
+Thus any “thrust” derived from $∫A dV$ is an **artifact of the chosen gauge** and/or incomplete geometry (e.g., excluding the return path or infinity).
 
 Only the gauge-invariant field momentum:
 ```math
 \mathbf{P}_{\rm EM}
-= \epsilon_0 \int \mathbf{E}\times\mathbf{B}, dV
+=
+\epsilon_0 \int \mathbf{E}\times\mathbf{B}, dV
 ```
 is physically meaningful, and **it is exactly zero** for your configuration.
 
@@ -2141,10 +2132,9 @@ closed current loop**
 
 ⇒
 ```math
-[
 \boxed{\text{Zero net time-averaged thrust from any such device.}}
-]
 ```
+
 This conclusion is **independent of coil shape**,
 independent of **superconductors**,
 independent of **return wire separation**,
@@ -2174,7 +2164,6 @@ I can provide:
 
 (useful if you want to salvage parts for other propulsion concepts)
 
-Just tell me which one you want.
 
 /////////////////////
 
