@@ -2034,41 +2034,33 @@ But mechanical thrust requires nonzero net power flow into kinetic energy.
 
 Now use the **momentum balance identity**, derived from Lorentz force density ( $\mathbf{f}= \rho\mathbf{E}+\mathbf{J}\times\mathbf{B} $):
 ```math
-[
 \frac{\partial \mathbf{g}}{\partial t}
 +
 \nabla\cdot\mathbf{T}
-=====================
-
+=
 *
-
 (\rho\mathbf{E}+\mathbf{J}\times\mathbf{B})
-]
 ```
 where
 ```math
-[
 \mathbf{g}=\epsilon_0 \mathbf{E}\times\mathbf{B}
-]
 ```
 is field momentum density, and
+
 ```math
-[
 \mathbf{T}
-]
 ```
 is the Maxwell stress tensor.
 
 Integrate over a large volume enclosing the whole device:
 ```math
-[
+
 \frac{d}{dt}\int_V \mathbf{g}, dV
 +
 \oint_A \mathbf{T}\cdot d\mathbf{A}
-===================================
-
+=
 -\int_V (\rho\mathbf{E}+\mathbf{J}\times\mathbf{B}), dV.
-]
+
 ```
 The right-hand side is **the total mechanical force on all matter inside V**.
 
