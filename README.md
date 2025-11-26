@@ -2007,23 +2007,21 @@ For your scenario:
 * Superconductors make ohmic losses negligible
 
 Thus:
+
 ```math
-[
 \left\langle \frac{dU_{\rm EM}}{dt} \right\rangle = 0,
 \qquad
 \left\langle \oint S\cdot dA \right\rangle \approx 0.
-]
-
+```
 So the time-averaged power delivered to the charges is:
 
-[
+```math
 \langle P_{\rm mech} \rangle
-============================
-
+=
 \left\langle \int J\cdot E, dV \right\rangle
 \approx 0.
-]
 ```
+
 
 This is the first brick in the wall:
 **on average no net power is given to the material subsystem.**
