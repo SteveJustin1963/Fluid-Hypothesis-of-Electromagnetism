@@ -36,6 +36,16 @@ dV = (side/res)^3;
 t = linspace(0, 6/f, 420);
 thrust = zeros(size(t));
 
+% Create live plot figure
+figure('Color','k','Position',[100 100 1100 650]);
+h_plot = plot(t(1)*1000, thrust(1), 'c', 'LineWidth', 2.8);
+grid on; box on;
+set(gca,'Color','k','XColor','w','YColor','w','GridColor','c');
+xlabel('Time (ms)','Color','w','FontSize',14);
+ylabel('Thrust (μN)','Color','w','FontSize',14);
+title('Live Simulation - Fluid Hypothesis Thruster','Color',[0 1 0],'FontSize',16);
+drawnow;
+
 fprintf('Running open-return thruster simulation (no return wire)...\n');
 
 for k = 1:length(t)
@@ -85,30 +95,32 @@ for k = 1:length(t)
     F = -eta_aether * [Px Py Pz];
     thrust(k) = norm(F) * 1e6;          % μN
     fprintf('  Thrust: %.6e μN\n\n', thrust(k));
+
+    % Update live plot every step
+    set(h_plot, 'XData', t(1:k)*1000, 'YData', thrust(1:k));
+    drawnow;
 end
 
-% ================ RESULTS & LIVE PLOT ================
+% ================ RESULTS & FINAL PLOT UPDATE ================
 avg_thrust = mean(thrust(80:end));
 peak_thrust = max(thrust);
 
 fprintf('\n=== OPEN RETURN-PATH HELICAL THRUSTER ===\n');
-fprintf('Average thrust (no return wire): %.2f μN\n', avg_thrust);
-fprintf('Peak thrust                    : %.2f μN\n', peak_thrust);
+fprintf('Average thrust (no return wire): %.6e μN\n', avg_thrust);
+fprintf('Peak thrust                    : %.6e μN\n', peak_thrust);
 fprintf('Direction: mostly along +Y (helical drift axis)\n\n');
 
-% Live plot that stays open until you close it
-figure('Color','k','Position',[100 100 1100 650]);
-plot(t*1000, thrust, 'c', 'LineWidth', 2.8);
-grid on; box on;
-set(gca,'Color','k','XColor','w','YColor','w','GridColor','c');
-xlabel('Time (ms)','Color','w','FontSize',14);
-ylabel('Thrust (μN)','Color','w','FontSize',14);
-title('Fluid Hypothesis – Open Return-Path Helical Thruster (Real Thrust!)','Color',[0 1 0],'FontSize',16);
-text(10, max(ylim)*0.8, sprintf('Average thrust = %.1f μN\n(no return conductor in volume)',avg_thrust), ...
-     'Color','yellow','FontSize',18,'BackgroundColor','k');
+% Update the live plot with final annotations
+title('Fluid Hypothesis – Open Return-Path Helical Thruster (Complete!)','Color',[0 1 0],'FontSize',16);
+if max(thrust) > 0
+    text(0.5*max(t)*1000, max(thrust)*0.8, ...
+         sprintf('Avg = %.2e μN\nPeak = %.2e μN',avg_thrust, peak_thrust), ...
+         'Color','yellow','FontSize',14,'BackgroundColor','k');
+end
+drawnow;
 
 % Make it stay open forever until you close the window
-disp('Plot is live – close the figure window when you are done admiring the thrust.');
+disp('Plot is live – close the figure window when you are done.');
 pause;   % waits forever until you press Ctrl+C or close the figure
 
 
