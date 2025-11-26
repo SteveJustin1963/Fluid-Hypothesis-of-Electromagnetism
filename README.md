@@ -2115,28 +2115,23 @@ This theorem is immune to clever geometry.
 
 Because the integral of **A over a finite region is not gauge-invariant**:
 ```math
-[
 \mathbf{A}' = \mathbf{A} + \nabla\chi
 \quad\Rightarrow\quad
 \int_V \mathbf{A}', dV
-======================
-
+==
 \int_V \mathbf{A}, dV
 +
 \int_V \nabla\chi, dV
-]
 ```
 The extra term reduces to a surface integral of χ.
-Depending on gauge, you can make ∫A dV arbitrarily large or small.
+Depending on gauge, you can make $∫A dV$ arbitrarily large or small.
 
 Thus any “thrust” derived from ∫A dV is an **artifact of the chosen gauge** and/or incomplete geometry (e.g., excluding the return path or infinity).
 
 Only the gauge-invariant field momentum:
 ```math
-[
 \mathbf{P}_{\rm EM}
 = \epsilon_0 \int \mathbf{E}\times\mathbf{B}, dV
-]
 ```
 is physically meaningful, and **it is exactly zero** for your configuration.
 
