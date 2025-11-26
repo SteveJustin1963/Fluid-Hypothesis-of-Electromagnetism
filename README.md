@@ -1985,10 +1985,9 @@ Integrate over a volume (V) with surface (A):
 ```math
 [
 -\frac{d}{dt}\int_V u, dV
--------------------------
-
-# \oint_A \mathbf{S}\cdot d\mathbf{A}
-
+-
+\oint_A \mathbf{S}\cdot d\mathbf{A}
+=
 \int_V \mathbf{J}\cdot\mathbf{E}, dV.
 ]
 ```
