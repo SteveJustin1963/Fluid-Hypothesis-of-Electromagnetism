@@ -315,17 +315,17 @@ Based on the Fluid Hypothesis of Electromagnetism, which reinterprets electromag
 **Procedure**:
 1. Calibrate platform drift with no current.
 2. Ramp current and measure lateral displacement/thrust using a laser Doppler vibrometer over 10-60 s trials.
-3. Vary frequency (to tune swirl radius via \(\Delta \theta = \frac{q}{\hbar} \oint \mathbf{A} \cdot dl\)) and pitch angle; repeat 20x per config.
+3. Vary frequency (to tune swirl radius via $\(\Delta \theta = \frac{q}{\hbar} \oint \mathbf{A} \cdot dl\))$ and pitch angle; repeat 20x per config.
 4. Control: Use symmetric solenoid for null thrust.
 
-**Expected Outcomes & Propulsion Potential**: Baseline predicts ~0 thrust (standard EM symmetry). Hypothesis deviation: Net force ~0.1-1 mN from asymmetric inflow/outflow (\(\nabla \cdot \mathbf{A} \neq 0\)), scaling with \(I^2\). If observed, iterate to multi-stage helical arrays for ~1 N thrust, enabling ether-vortex propulsion (e.g., satellite attitude control). Testable prediction: Thrust direction aligns with handedness, violating momentum conservation in vacuum if > measurement error.
+**Expected Outcomes & Propulsion Potential**: Baseline predicts ~0 thrust (standard EM symmetry). Hypothesis deviation: Net force ~0.1-1 mN from asymmetric inflow/outflow $(\(\nabla \cdot \mathbf{A} \neq 0\))$, scaling with $\(I^2\)$. If observed, iterate to multi-stage helical arrays for ~1 N thrust, enabling ether-vortex propulsion (e.g., satellite attitude control). Testable prediction: Thrust direction aligns with handedness, violating momentum conservation in vacuum if > measurement error.
 
 #### Experiment 2: Pulsed Density Gradient Ejector (Exploiting Charge-Induced Pressure Flows)
-**Rationale**: Positive charges create outward fluid pressure flows (density humps in \(\phi\)), while negative create inward pulls (dips), per \(\mathbf{F} = q (-\nabla \phi + \partial \mathbf{A}/\partial t)\). Pulsing asymmetric charge distributions could generate timed pressure waves, mimicking fluid ejection for recoil thrust—leveraging the hypothesis's compressible aether for non-reciprocal momentum, unlike standard Coulomb repulsion.
+**Rationale**: Positive charges create outward fluid pressure flows (density humps in $\(\phi\))$, while negative create inward pulls (dips), per $\(\mathbf{F} = q (-\nabla \phi + \partial \mathbf{A}/\partial t)\)$. Pulsing asymmetric charge distributions could generate timed pressure waves, mimicking fluid ejection for recoil thrust—leveraging the hypothesis's compressible aether for non-reciprocal momentum, unlike standard Coulomb repulsion.
 
 **Setup**:
 - Fabricate a capacitor array: Two parallel plates (10x10 cm, 1 mm gap) with one side segmented into three electrodes (outer two positive, center negative, biased via HV supply up to 10 kV).
-- Mount assembly on a torsion pendulum (sensitivity ~10^{-6} N·m) or capacitive force sensor in vacuum.
+- Mount assembly on a torsion pendulum $(sensitivity ~10^{-6} N·m)$ or capacitive force sensor in vacuum.
 - Pulse via MOSFET switch (1-100 Hz, 1-10 ms duration) synchronized with a microcontroller.
 
 **Procedure**:
