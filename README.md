@@ -1982,7 +1982,7 @@ Decrease of field energy + energy flowing out = work done on charges.
 # 2. **Integral energy conservation (the globally constraining form)**
 
 Integrate over a volume (V) with surface (A):
-
+```math
 [
 -\frac{d}{dt}\int_V u, dV
 -------------------------
@@ -1991,7 +1991,7 @@ Integrate over a volume (V) with surface (A):
 
 \int_V \mathbf{J}\cdot\mathbf{E}, dV.
 ]
-
+```
 This must hold for *every* volume, *every* circuit, *every* geometry.
 
 ---
