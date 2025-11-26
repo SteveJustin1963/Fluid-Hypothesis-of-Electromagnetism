@@ -1847,7 +1847,7 @@ Assume:
 Then:
 - The total electromagnetic energy stored in the fields simply oscillates at 2ω (twice the drive frequency).
 - Time-averaged power delivered to charges $⟨J·E⟩ = 0$ if superconductors (or just the tiny ohmic loss if copper).
-- Time-averaged radiated power $∮ S · dA over huge sphere ≈ 0$ in the quasi-static limit.
+- Time-averaged radiated power $∮ S · dA$ over huge sphere $≈ 0$ in the quasi-static limit.
 
 Plug into the integral Poynting theorem and take time average over one cycle:
 
