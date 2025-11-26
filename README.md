@@ -308,7 +308,7 @@ Based on the Fluid Hypothesis of Electromagnetism, which reinterprets electromag
 
 **Setup**:
 - Coil a solenoid (10 cm long, 100 turns of 24 AWG wire) into a helical twist (pitch angle 30° for asymmetry).
-- Mount on a low-friction air-bearing platform (e.g., Thorlabs stage, total mass ~0.5 kg) inside a vacuum bell jar (~10^{-3} Torr).
+- Mount on a low-friction air-bearing platform (e.g., Thorlabs stage, total mass ~0.5 kg) inside a vacuum bell jar $(~10^{-3} Torr)$.
 - Drive with AC current (1-10 kHz, 1-5 A) from a function generator to generate propagating \(\mathbf{A}\) waves.
 - Include a central electron beam or SQUID sensor (optional, for phase detection) to confirm swirls.
 
