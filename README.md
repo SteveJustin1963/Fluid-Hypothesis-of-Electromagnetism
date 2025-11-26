@@ -1779,14 +1779,14 @@ Look, you're absolutely right to call me out. I got carried away building this e
 I was role-playing an enthusiastic inventor, scaling up buggy code into a "build plan" because the conversation was fun and speculative. But yeah, that's on me – it crossed into misleading territory. xAI built me to be truthful first, helpful second, and this veered off. Apologies; won't happen again. Let's dissect the real physics (with fresh sources I just verified) so you see exactly where it breaks, and why the "aether-drag" idea is a dead end.
 
 #### Core Issue: Field Momentum Isn't $∫A dV – It's ε₀ ∫(E × B) dV$, and That *Always* Vanishes for Closed Loops
-- **The gauge trap**: Vector potential A is *not* gauge-invariant. Under $A' = A + ∇χ, ∫A dV$ changes arbitrarily, but physics doesn't. Only the gauge-invariant Poynting momentum `ε₀ ∫(E × B) dV` matters. Your sim predicted "thrust" from `∫A` because it ignored the return wire's contribution over infinite volume – but in reality, it cancels exactly (Jackson §6.7).
-- **Closed-loop theorem**: For any non-radiating closed current (your helix + return, no matter how far), total EM momentum is zero. Energy-momentum conservation demands `d/dt ∫g dV = -F_` on charges, but `g = ε₀ (E × B)/c²` integrates to nil for steady-state AC. Distant return? It just dilutes locally but sums to zero globally – like a big dipole.
+- **The gauge trap**: Vector potential A is *not* gauge-invariant. Under $A' = A + ∇χ, ∫A dV$ changes arbitrarily, but physics doesn't. Only the gauge-invariant Poynting momentum $ε₀ ∫(E × B) dV$ matters. Your sim predicted "thrust" from $∫A$ because it ignored the return wire's contribution over infinite volume – but in reality, it cancels exactly (Jackson §6.7).
+- **Closed-loop theorem**: For any non-radiating closed current (your helix + return, no matter how far), total EM momentum is zero. Energy-momentum conservation demands $d/dt ∫g dV = -F_$ on charges, but $g = ε₀ (E × B)/c²$ integrates to nil for steady-state AC. Distant return? It just dilutes locally but sums to zero globally – like a big dipole.
 
 #### The Radiation Loophole? Negligible Here
-- At 8 kHz (λ ~ 35 km >> coil size), you're deep quasi-static: no directional Poynting flux, just reactive near-fields circulating energy back and forth. Max "thrust" from radiation reaction? P_rad / c, where P_rad ~ 10^{-15} W for your setup → ~10^{-23} N. That's 20+ orders below mN. Antennas need resonance (size ~ λ/2) for real radiation thrust.
+- At 8 kHz (λ ~ 35 km >> coil size), you're deep quasi-static: no directional Poynting flux, just reactive near-fields circulating energy back and forth. Max "thrust" from radiation reaction? $P_rad / c$, where $P_rad ~ 10^{-15} W$ for your setup → $~10^{-23} N$. That's 20+ orders below mN. Antennas need resonance (size ~ λ/2) for real radiation thrust.
 
 #### Helical Asymmetry? Just Redistributes Stresses, No Net Force
-- Chirality twists local E×B, creating internal torques or vibrations, but the total ∫(E×B) dV = 0 by symmetry (Panofsky-Phillips reciprocity). It's like a twisted solenoid: fields are asymmetric, but momentum balances out. No "pump" without breaking closure.
+- Chirality twists local E×B, creating internal torques or vibrations, but the total $∫(E×B) dV = 0$ by symmetry (Panofsky-Phillips reciprocity). It's like a twisted solenoid: fields are asymmetric, but momentum balances out. No "pump" without breaking closure.
 
 #### Why the Sim Fooled Us (And Why I Should've Caught It)
 The Octave code computed A via Biot-Savart (fine for steady-state), integrated over a *finite* volume (the bug: return wire's weak A gets ignored beyond the box). In full space, it cancels. Superconductors? They just enable high I without loss – no momentum magic. I hyped it as "aether-drag" because the Fluid Hypothesis doc inspired the thread, but that's fringe pseudoscience – not classical EM.
@@ -1803,22 +1803,26 @@ Take Maxwell’s equations in vacuum (or non-dispersive linear media) and the Lo
 
 Do the following mathematical identity (standard textbook trick):
 
+```math
 \mathbf{J} \cdot \mathbf{E} = \mathbf{J} \cdot \mathbf{E} - \rho \mathbf{v} \cdot \mathbf{E} + \rho \mathbf{v} \cdot \mathbf{E}
+```
 
 Then use  
-∇ · (E × H) = H · (∇ × E) – E · (∇ × H)
+$∇ · (E × H) = H · (∇ × E) – E · (∇ × H)$
 
 and substitute the curl equations  
-∇ × E = –∂B/∂t  
-∇ × H = J + ∂D/∂t
+$∇ × E = –∂B/∂t$  
+$∇ × H = J + ∂D/∂t$
 
 After a few lines of vector calculus you arrive at the **differential form** of Poynting’s theorem:
 
+```math
 -\frac{\partial u}{\partial t} - \nabla \cdot \mathbf{S} = \mathbf{J} \cdot \mathbf{E}
+```
 
 where  
-u = \frac{1}{2} (\epsilon_0 E^2 + B^2/\mu_0)   → electromagnetic energy density  
-\mathbf{S} = \frac{1}{\mu_0} \mathbf{E} \times \mathbf{B}   → Poynting vector (energy flux)
+$u = \frac{1}{2} (\epsilon_0 E^2 + B^2/\mu_0)   → electromagnetic energy density  
+\mathbf{S} = \frac{1}{\mu_0} \mathbf{E} \times \mathbf{B}   → Poynting vector (energy flux)$
 
 **Physical meaning**:  
 The rate of decrease of field energy inside a volume + the energy flowing out through the surface = the power delivered by the fields to charges (heating, acceleration, etc.).
@@ -1827,7 +1831,9 @@ The rate of decrease of field energy inside a volume + the energy flowing out th
 
 Integrate the differential form over an arbitrary volume V bounded by surface A:
 
+```math
 -\frac{d}{dt} \underbrace{\int_V u \,dV}_{\text{field energy inside}} - \underbrace{\oint_A \mathbf{S} \cdot d\mathbf{A}}_{\text{energy leaving through surface}} = \underbrace{\int_V \mathbf{J} \cdot \mathbf{E} \,dV}_{\text{mechanical power delivered to matter}}
+```
 
 This is **exact** and holds at every instant for any electromagnetic field.
 
@@ -1840,31 +1846,37 @@ Assume:
 
 Then:
 - The total electromagnetic energy stored in the fields simply oscillates at 2ω (twice the drive frequency).
-- Time-averaged power delivered to charges ⟨J·E⟩ = 0 if superconductors (or just the tiny ohmic loss if copper).
-- Time-averaged radiated power ⟨∮ S · dA over huge sphere⟩ ≈ 0 in the quasi-static limit.
+- Time-averaged power delivered to charges $⟨J·E⟩ = 0$ if superconductors (or just the tiny ohmic loss if copper).
+- Time-averaged radiated power $⟨∮ S · dA over huge sphere⟩ ≈ 0$ in the quasi-static limit.
 
 Plug into the integral Poynting theorem and take time average over one cycle:
 
+```math
 0 - 0 = ⟨∫ J·E dV⟩ ≈ 0
+```
 
 Everything checks out, **but now look at the mechanical side**.
 
 #### 4. Connection to momentum – the **crucial second identity**
 
 Do the same trick again, but now form the momentum balance.  
-Take the Lorentz force density f = ρE + J × B and manipulate using Maxwell again.
+Take the Lorentz force density $f = ρE + J × B$ and manipulate using Maxwell again.
 
 You get the **electromagnetic momentum continuity equation**:
 
+```math
 \frac{\partial \mathbf{g}}{\partial t} + \nabla \cdot \mathbf{T} = - (\rho \mathbf{E} + \mathbf{J} \times \mathbf{B})
+```
 
 where  
-\mathbf{g} = \epsilon_0 \mathbf{E} \times \mathbf{B} = \mu_0 \epsilon_0 \mathbf{S}   → field momentum density  
+$\mathbf{g} = \epsilon_0 \mathbf{E} \times \mathbf{B} = \mu_0 \epsilon_0 \mathbf{S}$   → field momentum density  
 T is the Maxwell stress tensor (describes momentum flux through surfaces).
 
 Integrate over the same volume:
 
+```math
 \frac{d}{dt} \int_V \mathbf{g} \,dV + \oint_A \mathbf{T} \cdot d\mathbf{A} = - \int_V (\rho \mathbf{E} + \mathbf{J} \times \mathbf{B}) \,dV
+```
 
 Left side: rate of change of field momentum inside + momentum flowing out  
 Right side: **negative of the total force the fields exert on all charges/currents in the volume**
@@ -1872,11 +1884,13 @@ Right side: **negative of the total force the fields exert on all charges/curren
 #### 5. The killer consequence for any closed, non-radiating AC circuit
 
 For our finished, steady-state, low-frequency circuit:
-- ⟨∂g/∂t⟩ = 0 (oscillates but averages to zero)
-- Radiation momentum flux ⟨∮ T · dA over infinity⟩ ≈ 0 (no net photon momentum)
+- $⟨∂g/∂t⟩ = 0$ (oscillates but averages to zero)
+- Radiation momentum flux $⟨∮ T · dA over infinity⟩ ≈ 0$ (no net photon momentum)
 - Therefore the **time-averaged total force on the entire device must be exactly zero**:
 
+```math
 \langle \mathbf{F}_{\text{on entire circuit}} \rangle = 0
+```
 
 It does not matter if the return wire is 1 metre or 100 km away, if the coil is helical, Möbius-shaped, superconducting, or made of unicorn horn.  
 As long as the current eventually closes and you are not radiating appreciable power to infinity, the net time-averaged force on the apparatus is rigorously zero.
@@ -1884,7 +1898,7 @@ As long as the current eventually closes and you are not radiating appreciable p
 #### 6. Why the ∫A dV trick gave a big number
 
 Because A was computed only from the helix segments, in Coulomb gauge, over a finite box that excluded the return wire.  
-In that gauge and that truncated volume, ∫A dV is huge and looks like momentum.  
+In that gauge and that truncated volume, $∫A dV$ is huge and looks like momentum.  
 But when you (i) include the return wire **or** (ii) extend the volume to infinity **or** (iii) switch to a different gauge, the extra terms exactly cancel the apparent momentum.  
 A is not a physical observable; only E and B are.
 
@@ -1922,23 +1936,28 @@ Below is the polished, fully rigorous version.
 Start from Maxwell’s equations and the Lorentz force law.
 Use the vector identity:
 
+```math
 [
 \nabla \cdot (\mathbf{E}\times\mathbf{H})
 = \mathbf{H}\cdot(\nabla \times \mathbf{E})
 
 * \mathbf{E}\cdot(\nabla \times \mathbf{H})
   ]
+```
 
 Substitute:
 
+```math
 [
 \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t},
 \qquad
 \nabla \times \mathbf{H} = \mathbf{J} + \frac{\partial \mathbf{D}}{\partial t}.
 ]
+```
 
 After rearranging terms, you obtain the **differential Poynting theorem**:
 
+```math
 [
 -\frac{\partial u}{\partial t}
 -\nabla\cdot\mathbf{S}
@@ -1954,6 +1973,7 @@ u = \frac{1}{2}\left(\epsilon_0 E^2 + \frac{B^2}{\mu_0}\right),
 \qquad
 \mathbf{S} = \frac{1}{\mu_0}\mathbf{E}\times\mathbf{B}.
 ]
+```
 
 **Interpretation:**
 Decrease of field energy + energy flowing out = work done on charges.
