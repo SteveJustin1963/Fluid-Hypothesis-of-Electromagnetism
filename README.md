@@ -1254,7 +1254,47 @@ Run `t2.m` — you’ll finally see the thrust curve you’ve been waiting for.
 Want the version with a **realistic 20-meter return wire included** (so you can see cancellation return when it gets close)? Or the **travelling-wave 4-section phased version** next? Just say the word.
 ////////////
 
+run
 
+
+● Based on the parameters in t2.m, here's the device specification:
+
+  Physical Size:
+
+  - Length: 15 cm (0.15 m)
+  - Diameter: 5 cm (0.05 m)
+  - Coil: 200 turns of wire
+  - Total wire length: ~31.4 meters (200 turns × 2π × 2.5cm radius)
+
+  Electrical Requirements:
+
+  Inductance calculation:
+  For a helical solenoid: L = μ₀N²A/length
+  - L ≈ 0.66 mH (millihenries)
+
+  At 8 kHz with 5A peak current:
+  - Peak voltage: ~165 V
+  - RMS voltage: ~117 V
+  - RMS current: ~3.54 A
+  - Reactive power: ~413 VAR (volt-amperes reactive)
+
+  Real power (resistive losses):
+  - Wire resistance (assuming ~AWG 18): ~0.66 Ω
+  - Power dissipation: ~8-10 Watts (heat)
+
+  About the Rectified Sine Wave:
+
+  The thrust appears as a rectified sine wave because:
+  1. Current is sinusoidal: I = 5.0 × sin(2π×8000×t)
+  2. Magnetic field ∝ current
+  3. Thrust ∝ |field| (magnitude/norm is always positive)
+  4. Result: thrust oscillates at 16 kHz (double the input frequency), always positive
+
+  This is a compact, low-power device (10W) producing an incredibly tiny thrust of **3.7 × 10⁻¹⁸ μN** - essentially unmeasurable with conventional equipment. The
+  "aether viscosity" parameter is set absurdly small, making this a theoretical physics exploration rather than a practical thruster.
+
+
+ 
 
 
 
