@@ -1961,8 +1961,7 @@ After rearranging terms, you obtain the **differential Poynting theorem**:
 [
 -\frac{\partial u}{\partial t}
 -\nabla\cdot\mathbf{S}
-======================
-
+=
 \mathbf{J}\cdot\mathbf{E}
 ]
 
