@@ -1680,6 +1680,95 @@ Time step 34/420 (8.1%) - t=0.05907 ms
 
 
 
+# Here's an ASCII schematic of the t2.m helical thruster circuit:
+
+                      8 kHz AC Signal Generator
+                                |
+                                |
+                      /---------+----------\
+                      |                    |
+                      |     Driver/Amp     |
+                      |    (5A peak)       |
+                      |                    |
+                      \---------+----------/
+                                |
+                                |
+                           I = 5·sin(ωt)
+                                |
+                                ↓
+                           _____|_____
+                          |           |
+                          |  Helical  |
+                          |   Coil    |
+                          |           |
+                          | L = 0.66mH|
+            +-------------+           +-------------+
+            |             | N = 200   |             |
+            |             | turns     |             |
+            |             |           |             |
+            |             | 15cm long |             |
+         ___↓___          | 5cm diam  |          ___↓___
+        /       \         |           |         /       \
+       |  Helix  |        |  Pitch    |        |  Helix  |
+       | Section |        |  angle    |        | Section |
+       |  with   |        |  32°      |        |  with   |
+       | asymm.  |        |  (handed) |        | asymm.  |
+       |  drift  |        |           |        |  drift  |
+        \_______/         |___________|         \_______/
+            |                   |                   |
+            |                   |                   |
+            +-------------------+-------------------+
+                                |
+                                |
+                           Return Path
+                      (far away, ~1.4m distance)
+                      (minimal field in volume)
+                                |
+                                ⏚
+
+
+    Side View of Helix Geometry:
+
+      ╔═════════════════════════════════════╗
+      ║                                     ║
+      ║     ○ ○ ○ ○ ○ ○ ○ ○ ○ ○            ║
+      ║    ○               ○ ○ ○            ║
+      ║   ○                     ○           ║  ← Y-axis drift
+      ║  ○                       ○          ║    (32° pitch)
+      ║ ○                         ○         ║
+      ║○                           ○        ║
+      ║○                            ○       ║
+      ║ ○                           ○       ║
+      ║  ○                         ○        ║
+      ║   ○                       ○         ║
+      ║    ○ ○                   ○          ║
+      ║        ○ ○ ○ ○ ○ ○ ○ ○ ○           ║
+      ║                                     ║
+      ╚═════════════════════════════════════╝
+         ←------- 15 cm length -------→
+
+         200 turns, helical + Y-drift
+
+
+    Electrical Specs:
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    Frequency:     8 kHz
+    Current:       5 A peak (3.54 A RMS)
+    Voltage:       ~165 V peak (~117 V RMS)
+    Inductance:    0.66 mH
+    Power:         ~10 W (resistive losses)
+    Reactive:      ~413 VAR
+
+  Key Features:
+
+  1. Asymmetric helix - 32° pitch angle creates Y-axis drift
+  2. Open return path - return conductor is far away (~1.4m), not inside the active simulation volume
+  3. AC driven - 8 kHz sine wave creates time-varying magnetic field
+  4. Thrust mechanism - hypothetical "aether viscosity" creates drag force on the asymmetric field pattern
+
+  The circuit is simple: an 8 kHz AC source driving 5A through a 200-turn helical coil with intentional geometric asymmetry to break thrust cancellation.
+
+///////////
 
 
 
