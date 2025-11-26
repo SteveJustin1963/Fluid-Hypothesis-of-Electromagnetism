@@ -1964,9 +1964,9 @@ After rearranging terms, you obtain the **differential Poynting theorem**:
 =
 \mathbf{J}\cdot\mathbf{E}
 ]
-
+```
 with
-
+```math
 [
 u = \frac{1}{2}\left(\epsilon_0 E^2 + \frac{B^2}{\mu_0}\right),
 \qquad
