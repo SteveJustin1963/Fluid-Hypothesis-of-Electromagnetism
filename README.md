@@ -1252,12 +1252,14 @@ Build this exact thing (just a helical coil with the return wire going 10–20 m
 Run `t2.m` — you’ll finally see the thrust curve you’ve been waiting for.
 
 Want the version with a **realistic 20-meter return wire included** (so you can see cancellation return when it gets close)? Or the **travelling-wave 4-section phased version** next? Just say the word.
+
 ////////////
+
 
 run
 
 
-● Based on the parameters in t2.m, here's the device specification:
+Based on the parameters in t2.m, here's the device specification:
 
   Physical Size:
 
@@ -1293,8 +1295,392 @@ run
   This is a compact, low-power device (10W) producing an incredibly tiny thrust of **3.7 × 10⁻¹⁸ μN** - essentially unmeasurable with conventional equipment. The
   "aether viscosity" parameter is set absurdly small, making this a theoretical physics exploration rather than a practical thruster.
 
+<img width="799" height="659" alt="image" src="https://github.com/user-attachments/assets/ccb4eae1-061e-4f10-8b32-d85ee0a1b8b7" />
 
  
+```
+Running open-return thruster simulation (no return wire)...
+Time step 1/420 (0.2%) - t=0.00000 ms
+  Current: I = 0.000 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=0.000000e+00, Py=0.000000e+00, Pz=0.000000e+00
+  Max field: Ax=0.000000e+00, Ay=0.000000e+00, Az=0.000000e+00
+  Thrust: 0.000000e+00 μN
+
+Time step 2/420 (0.5%) - t=0.00179 ms
+  Current: I = 0.449 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=5.902075e-10, Py=-4.926473e-09, Pz=-1.856742e-07
+  Max field: Ax=8.649822e-05, Ay=8.387206e-05, Az=4.852275e-05
+  Thrust: 3.900549e-19 μN
+
+Time step 3/420 (0.7%) - t=0.00358 ms
+  Current: I = 0.895 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=1.175640e-09, Py=-9.813091e-09, Pz=-3.698462e-07
+  Max field: Ax=1.722967e-04, Ay=1.670656e-04, Az=9.665295e-05
+  Thrust: 7.769543e-19 μN
+
+Time step 4/420 (1.0%) - t=0.00537 ms
+  Current: I = 1.333 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=1.751562e-09, Py=-1.462032e-08, Pz=-5.510263e-07
+  Max field: Ax=2.567013e-04, Ay=2.489076e-04, Az=1.440012e-04
+  Thrust: 1.157568e-18 μN
+
+Time step 5/420 (1.2%) - t=0.00716 ms
+  Current: I = 1.761 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=2.313315e-09, Py=-1.930928e-08, Pz=-7.277486e-07
+  Max field: Ax=3.390292e-04, Ay=3.287360e-04, Az=1.901846e-04
+  Thrust: 1.528818e-18 μN
+
+Time step 6/420 (1.4%) - t=0.00895 ms
+  Current: I = 2.174 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=2.856352e-09, Py=-2.384202e-08, Pz=-8.985836e-07
+  Max field: Ax=4.186145e-04, Ay=4.059049e-04, Az=2.348294e-04
+  Thrust: 1.887699e-18 μN
+
+Time step 7/420 (1.7%) - t=0.01074 ms
+  Current: I = 2.570 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=3.376283e-09, Py=-2.818189e-08, Pz=-1.062149e-06
+  Max field: Ax=4.948132e-04, Ay=4.797902e-04, Az=2.775744e-04
+  Thrust: 2.231309e-18 μN
+
+Time step 8/420 (1.9%) - t=0.01253 ms
+  Current: I = 2.945 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=3.868899e-09, Py=-3.229377e-08, Pz=-1.217122e-06
+  Max field: Ax=5.670089e-04, Ay=5.497940e-04, Az=3.180739e-04
+  Thrust: 2.556869e-18 μN
+
+Time step 9/420 (2.1%) - t=0.01432 ms
+  Current: I = 3.296 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=4.330217e-09, Py=-3.614440e-08, Pz=-1.362249e-06
+  Max field: Ax=6.346176e-04, Ay=6.153500e-04, Az=3.560002e-04
+  Thrust: 2.861743e-18 μN
+
+Time step 10/420 (2.4%) - t=0.01611 ms
+  Current: I = 3.621 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=4.756504e-09, Py=-3.970262e-08, Pz=-1.496355e-06
+  Max field: Ax=6.970923e-04, Ay=6.759280e-04, Az=3.910466e-04
+  Thrust: 3.143467e-18 μN
+
+Time step 11/420 (2.6%) - t=0.01790 ms
+  Current: I = 3.916 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=5.144311e-09, Py=-4.293966e-08, Pz=-1.618356e-06
+  Max field: Ax=7.539277e-04, Ay=7.310377e-04, Az=4.229294e-04
+  Thrust: 3.399760e-18 μN
+
+Time step 12/420 (2.9%) - t=0.01969 ms
+  Current: I = 4.179 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=5.490502e-09, Py=-4.582931e-08, Pz=-1.727264e-06
+  Max field: Ax=8.046638e-04, Ay=7.802335e-04, Az=4.513908e-04
+  Thrust: 3.628549e-18 μN
+
+Time step 13/420 (3.1%) - t=0.02148 ms
+  Current: I = 4.409 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+          Biot-Savart complete.
+  Momentum: Px=5.792275e-09, Py=-4.834822e-08, Pz=-1.822199e-06
+  Max field: Ax=8.488904e-04, Ay=8.231173e-04, Az=4.762004e-04
+  Thrust: 3.827985e-18 μN
+
+Time step 14/420 (3.3%) - t=0.02327 ms
+  Current: I = 4.603 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=6.047190e-09, Py=-5.047600e-08, Pz=-1.902393e-06
+  Max field: Ax=8.862495e-04, Ay=8.593422e-04, Az=4.971577e-04
+  Thrust: 3.996452e-18 μN
+
+Time step 15/420 (3.6%) - t=0.02506 ms
+  Current: I = 4.760 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=6.253183e-09, Py=-5.219543e-08, Pz=-1.967197e-06
+  Max field: Ax=9.164391e-04, Ay=8.886151e-04, Az=5.140931e-04
+  Thrust: 4.132588e-18 μN
+
+Time step 16/420 (3.8%) - t=0.02685 ms
+  Current: I = 4.878 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=6.408589e-09, Py=-5.349261e-08, Pz=-2.016086e-06
+  Max field: Ax=9.392147e-04, Ay=9.106993e-04, Az=5.268695e-04
+  Thrust: 4.235293e-18 μN
+
+Time step 17/420 (4.0%) - t=0.02864 ms
+  Current: I = 4.957 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=6.512151e-09, Py=-5.435704e-08, Pz=-2.048666e-06
+  Max field: Ax=9.543922e-04, Ay=9.254160e-04, Az=5.353836e-04
+  Thrust: 4.303734e-18 μN
+
+Time step 18/420 (4.3%) - t=0.03043 ms
+  Current: I = 4.996 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=6.563030e-09, Py=-5.478173e-08, Pz=-2.064672e-06
+  Max field: Ax=9.618489e-04, Ay=9.326462e-04, Az=5.395665e-04
+  Thrust: 4.337359e-18 μN
+
+Time step 19/420 (4.5%) - t=0.03222 ms
+  Current: I = 4.994 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=6.560815e-09, Py=-5.476324e-08, Pz=-2.063975e-06
+  Max field: Ax=9.615243e-04, Ay=9.323315e-04, Az=5.393844e-04
+  Thrust: 4.335896e-18 μN
+
+Time step 20/420 (4.8%) - t=0.03401 ms
+  Current: I = 4.952 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=6.505524e-09, Py=-5.430172e-08, Pz=-2.046581e-06
+  Max field: Ax=9.534210e-04, Ay=9.244743e-04, Az=5.348388e-04
+  Thrust: 4.299355e-18 μN
+
+Time step 21/420 (5.0%) - t=0.03580 ms
+  Current: I = 4.870 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=6.397604e-09, Py=-5.340091e-08, Pz=-2.012631e-06
+  Max field: Ax=9.376048e-04, Ay=9.091383e-04, Az=5.259664e-04
+  Thrust: 4.228033e-18 μN
+
+Time step 22/420 (5.2%) - t=0.03759 ms
+  Current: I = 4.748 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=6.237929e-09, Py=-5.206810e-08, Pz=-1.962398e-06
+  Max field: Ax=9.142035e-04, Ay=8.864474e-04, Az=5.128390e-04
+  Thrust: 4.122507e-18 μN
+
+Time step 23/420 (5.5%) - t=0.03938 ms
+  Current: I = 4.588 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=6.027789e-09, Py=-5.031406e-08, Pz=-1.896290e-06
+  Max field: Ax=8.834063e-04, Ay=8.565853e-04, Az=4.955628e-04
+  Thrust: 3.983631e-18 μN
+
+Time step 24/420 (5.7%) - t=0.04117 ms
+  Current: I = 4.391 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=5.768886e-09, Py=-4.815299e-08, Pz=-1.814841e-06
+  Max field: Ax=8.454626e-04, Ay=8.197936e-04, Az=4.742775e-04
+  Thrust: 3.812527e-18 μN
+
+Time step 25/420 (6.0%) - t=0.04296 ms
+  Current: I = 4.159 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=5.463313e-09, Py=-4.560237e-08, Pz=-1.718711e-06
+  Max field: Ax=8.006791e-04, Ay=7.763698e-04, Az=4.491555e-04
+  Thrust: 3.610581e-18 μN
+
+Time step 26/420 (6.2%) - t=0.04475 ms
+  Current: I = 3.892 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=5.113542e-09, Py=-4.268283e-08, Pz=-1.608676e-06
+  Max field: Ax=7.494183e-04, Ay=7.266653e-04, Az=4.203998e-04
+  Thrust: 3.379425e-18 μN
+
+Time step 27/420 (6.4%) - t=0.04654 ms
+  Current: I = 3.595 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=4.722404e-09, Py=-3.941799e-08, Pz=-1.485627e-06
+  Max field: Ax=6.920948e-04, Ay=6.710822e-04, Az=3.882431e-04
+  Thrust: 3.120931e-18 μN
+
+Time step 28/420 (6.7%) - t=0.04833 ms
+  Current: I = 3.268 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=4.293062e-09, Py=-3.583426e-08, Pz=-1.350560e-06
+  Max field: Ax=6.291723e-04, Ay=6.100701e-04, Az=3.529456e-04
+  Thrust: 2.837188e-18 μN
+
+Time step 29/420 (6.9%) - t=0.05012 ms
+  Current: I = 2.915 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=3.828990e-09, Py=-3.196065e-08, Pz=-1.204567e-06
+  Max field: Ax=5.611599e-04, Ay=5.441226e-04, Az=3.147928e-04
+  Thrust: 2.530494e-18 μN
+
+Time step 30/420 (7.1%) - t=0.05191 ms
+  Current: I = 2.538 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=3.333942e-09, Py=-2.782847e-08, Pz=-1.048829e-06
+  Max field: Ax=4.886079e-04, Ay=4.737733e-04, Az=2.740934e-04
+  Thrust: 2.203327e-18 μN
+
+Time step 31/420 (7.4%) - t=0.05370 ms
+  Current: I = 2.140 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=2.811922e-09, Py=-2.347116e-08, Pz=-8.846063e-07
+  Max field: Ax=4.121030e-04, Ay=3.995912e-04, Az=2.311766e-04
+  Thrust: 1.858336e-18 μN
+
+Time step 32/420 (7.6%) - t=0.05549 ms
+  Current: I = 1.726 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=2.267155e-09, Py=-1.892398e-08, Pz=-7.132272e-07
+  Max field: Ax=3.322643e-04, Ay=3.221764e-04, Az=1.863897e-04
+  Thrust: 1.498312e-18 μN
+
+Time step 33/420 (7.9%) - t=0.05728 ms
+  Current: I = 1.297 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=1.704047e-09, Py=-1.422371e-08, Pz=-5.360782e-07
+  Max field: Ax=2.497376e-04, Ay=2.421553e-04, Az=1.400948e-04
+  Thrust: 1.126166e-18 μN
+
+Time step 34/420 (8.1%) - t=0.05907 ms
+  Current: I = 0.858 A
+  Computing Biot-Savart for 799 wire segments...
+    Segment 200/799 (25%)
+    Segment 400/799 (50%)
+    Segment 600/799 (75%)
+  Biot-Savart complete.
+  Momentum: Px=1.127153e-09, Py=-9.408363e-09, Pz=-3.545924e-07
+  Max field: Ax=1.651905e-04, Ay=1.601752e-04, Az=9.266663e-05
+  Thrust: 7.449099e-19 μN
+```
+
+
+////
+
+
+
+
 
 
 
