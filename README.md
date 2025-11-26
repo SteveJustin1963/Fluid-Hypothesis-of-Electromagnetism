@@ -2075,23 +2075,18 @@ For your coil + distant return conductor, in steady state:
 
 Thus:
 ```math
-[
 \left\langle \frac{d}{dt}\int \mathbf{g}, dV \right\rangle = 0,
 \qquad
 \left\langle \oint \mathbf{T} \cdot d\mathbf{A} \right\rangle \approx 0.
-]
 ```
 Therefore the *time-average* of the net force on the device is:
 ```math
-[
 \boxed{
 \left\langle \mathbf{F}_{\rm total} \right\rangle
-=================================================
-
+=
 \left\langle -\int (\rho\mathbf{E}+\mathbf{J}\times\mathbf{B}), dV \right\rangle
 = 0.
 }
-]
 ```
 This is not a special case; it is a **global conservation law** directly derived from Maxwell’s equations.
 
