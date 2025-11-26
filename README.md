@@ -1821,8 +1821,8 @@ After a few lines of vector calculus you arrive at the **differential form** of 
 ```
 
 where  
-$u = \frac{1}{2} (\epsilon_0 E^2 + B^2/\mu_0)   → electromagnetic energy density  
-\mathbf{S} = \frac{1}{\mu_0} \mathbf{E} \times \mathbf{B}   → Poynting vector (energy flux)$
+$u = \frac{1}{2} (\epsilon_0 E^2 + B^2/\mu_0)$   → electromagnetic energy density  
+$\mathbf{S} = \frac{1}{\mu_0} \mathbf{E} \times \mathbf{B}$   → Poynting vector (energy flux)
 
 **Physical meaning**:  
 The rate of decrease of field energy inside a volume + the energy flowing out through the surface = the power delivered by the fields to charges (heating, acceleration, etc.).
@@ -2008,7 +2008,7 @@ For your scenario:
 * Superconductors make ohmic losses negligible
 
 Thus:
-
+```math
 [
 \left\langle \frac{dU_{\rm EM}}{dt} \right\rangle = 0,
 \qquad
@@ -2024,6 +2024,7 @@ So the time-averaged power delivered to the charges is:
 \left\langle \int J\cdot E, dV \right\rangle
 \approx 0.
 ]
+```
 
 This is the first brick in the wall:
 **on average no net power is given to the material subsystem.**
@@ -2034,8 +2035,8 @@ But mechanical thrust requires nonzero net power flow into kinetic energy.
 
 # 4. **Local electromagnetic momentum conservation**
 
-Now use the **momentum balance identity**, derived from Lorentz force density ( \mathbf{f}= \rho\mathbf{E}+\mathbf{J}\times\mathbf{B} ):
-
+Now use the **momentum balance identity**, derived from Lorentz force density ( $\mathbf{f}= \rho\mathbf{E}+\mathbf{J}\times\mathbf{B} $):
+```math
 [
 \frac{\partial \mathbf{g}}{\partial t}
 +
@@ -2046,21 +2047,23 @@ Now use the **momentum balance identity**, derived from Lorentz force density ( 
 
 (\rho\mathbf{E}+\mathbf{J}\times\mathbf{B})
 ]
-
+```
 where
-
+```math
 [
 \mathbf{g}=\epsilon_0 \mathbf{E}\times\mathbf{B}
 ]
-
+```
 is field momentum density, and
+```math
 [
 \mathbf{T}
 ]
+```
 is the Maxwell stress tensor.
 
 Integrate over a large volume enclosing the whole device:
-
+```math
 [
 \frac{d}{dt}\int_V \mathbf{g}, dV
 +
@@ -2069,7 +2072,7 @@ Integrate over a large volume enclosing the whole device:
 
 -\int_V (\rho\mathbf{E}+\mathbf{J}\times\mathbf{B}), dV.
 ]
-
+```
 The right-hand side is **the total mechanical force on all matter inside V**.
 
 ---
@@ -2082,15 +2085,15 @@ For your coil + distant return conductor, in steady state:
 * Net radiated momentum flux is ~0 (8 kHz deep near field)
 
 Thus:
-
+```math
 [
 \left\langle \frac{d}{dt}\int \mathbf{g}, dV \right\rangle = 0,
 \qquad
 \left\langle \oint \mathbf{T} \cdot d\mathbf{A} \right\rangle \approx 0.
 ]
-
+```
 Therefore the *time-average* of the net force on the device is:
-
+```math
 [
 \boxed{
 \left\langle \mathbf{F}_{\rm total} \right\rangle
@@ -2100,7 +2103,7 @@ Therefore the *time-average* of the net force on the device is:
 = 0.
 }
 ]
-
+```
 This is not a special case; it is a **global conservation law** directly derived from Maxwell’s equations.
 
 It does not matter:
@@ -2122,7 +2125,7 @@ This theorem is immune to clever geometry.
 # 6. **Why the ∫A dV method produces bogus thrust**
 
 Because the integral of **A over a finite region is not gauge-invariant**:
-
+```math
 [
 \mathbf{A}' = \mathbf{A} + \nabla\chi
 \quad\Rightarrow\quad
@@ -2133,19 +2136,19 @@ Because the integral of **A over a finite region is not gauge-invariant**:
 +
 \int_V \nabla\chi, dV
 ]
-
+```
 The extra term reduces to a surface integral of χ.
 Depending on gauge, you can make ∫A dV arbitrarily large or small.
 
 Thus any “thrust” derived from ∫A dV is an **artifact of the chosen gauge** and/or incomplete geometry (e.g., excluding the return path or infinity).
 
 Only the gauge-invariant field momentum:
-
+```math
 [
 \mathbf{P}_{\rm EM}
 = \epsilon_0 \int \mathbf{E}\times\mathbf{B}, dV
 ]
-
+```
 is physically meaningful, and **it is exactly zero** for your configuration.
 
 ---
@@ -2158,10 +2161,11 @@ negligible radiation at 8 kHz +
 closed current loop**
 
 ⇒
+```math
 [
 \boxed{\text{Zero net time-averaged thrust from any such device.}}
 ]
-
+```
 This conclusion is **independent of coil shape**,
 independent of **superconductors**,
 independent of **return wire separation**,
