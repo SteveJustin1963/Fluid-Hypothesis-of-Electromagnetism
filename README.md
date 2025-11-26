@@ -1054,6 +1054,71 @@ Want the **3D animated version** of the +30° case with swirling arrows and glow
 
 ///////////
 
+You ran the last script I gave you (the clean multi-case one) and got essentially **zero thrust** for all cases — including the ±30° helical ones — right?
+
+That’s actually the **correct and honest result** once the code is properly written.  
+The earlier versions I posted (the ones that were showing 900 μN or 9 μN or whatever) all contained **one critical physics mistake** that artificially created thrust where there should be none.
+
+### What was the bug that made it look like it worked?
+
+In every “working” version I sent before, the thrust was calculated roughly like this (simplified):
+
+```matlab
+P_total = sum(A, 'all') * dV          % total integrated vector potential
+F = -eta * P_total
+```
+
+That is completely wrong.
+
+The vector potential A from a closed current loop (or any stationary/current distribution) is **odd under parity** across the volume. When you integrate A over a symmetric volume centred on the coil, the positive and negative contributions cancel **exactly** (or almost exactly once numerical noise is low). There is no net aether momentum → no net drag → **zero thrust**.
+
+This cancellation is guaranteed by the Biot–Savart law for any current distribution that returns on itself. The helical coil is still a closed circuit (the leads go back down the axis or are twisted together), so the total ∫A dV over a large enough volume is rigorously zero in steady state or quasi-steady state.
+
+The Fluid Hypothesis, **as currently formulated in the document you posted**, does **not** predict any net thrust from a single helical solenoid, no matter how asymmetric you make the winding, as long as the current forms a closed loop.
+
+### So does that mean the entire propulsion idea is dead?
+
+Not necessarily — but it does mean the **simple asymmetric solenoid** (Experiment 1) is fundamentally the wrong geometry for producing net momentum transfer in the fluid picture. The symmetry cancellation is too strong.
+
+The hypothesis can still allow reactionless propulsion, but only with geometries or operating regimes that break the cancellation in a way the theory actually permits. Here are the only ways that can happen under a strict reading of the fluid model:
+
+#### Viable directions (still allowed by the theory)
+
+1. **Open / non-closed current paths**  
+   If the return current is geometrically far away or heavily shielded (coaxial cable with outer braid grounded at infinity), the cancellation volume no longer includes both go-and-return. This is essentially what the original Alexandre Martins papers hint at with “long transmission lines” and “single-wire power transfer”.
+
+2. **Travelling-wave structures** (true propagating A-waves)  
+   Run two (or more) helical coils spaced λ/4 apart and drive them with 90° phase shift → you create a real travelling swirl instead of a standing one. The momentum is continuously radiated away as an electromagnetic wave (which in the fluid picture is a real aether wave carrying net momentum). The device recoils. This is basically a phased-array antenna, but interpreted as an aether pump.
+
+3. **Time-retarded mutual inductance asymmetry** (the one the document itself admits is problematic)  
+   Fast transients where the return stroke hasn’t “felt” the outgoing one yet because of light-speed delay. Requires very fast rise times and physically long structures.
+
+4. **Experiment 2 (asymmetric pulsed capacitor)** is actually more promising  
+   Because electrostatic configurations do **not** have the same closed-loop symmetry. An asymmetric charge distribution really does create a net dipole moment in ϕ, and fast pulsing can launch a net pressure wave in one direction before the return wave catches up.
+
+### Bottom line
+
+Your “zero thrust” result is **not a coding error** — it is the correct application of the Biot–Savart law to any closed-circuit device. The earlier scripts that showed thrust were cheating by accidentally breaking symmetry in the numerical integration or using fake momentum terms.
+
+The Fluid Hypothesis, as written, does **not** predict measurable thrust from a simple helical solenoid on a tabletop (μN–mN range) in quasi-static or moderate-frequency AC operation.
+
+To get real thrust you need one of the four routes above — especially #1 (open return path) or #2 (true travelling-wave helical antenna driven in phased array).
+
+If you still want to chase this, the next concrete thing to simulate/build is:
+
+- A **single-wire toroidal coil** (wind the helix into a torus so the return lead is outside and far away)  
+  or  
+- A **4–8 section travelling-wave helical antenna** fed by a 90° phased RF source at a few MHz
+
+Those geometries can, in the fluid interpretation, give a small but non-zero net momentum flux.
+
+But the plain helical solenoid on a pendulum in a bell jar? It’s going to read zero, exactly as your corrected simulation now shows — and exactly as standard electromagnetism has always predicted.
+
+Sorry for the earlier over-enthusiastic (and wrong) scripts. The physics symmetry won this round.
+
+///////////////////
+
+
 
 
 
